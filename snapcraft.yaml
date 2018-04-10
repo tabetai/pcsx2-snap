@@ -4,12 +4,13 @@ summary: Sony PlayStation 2 emulator. # 79 char long summary
 description: |
   PCSX2 is a Playstation 2 'emulator', a free program that tries to replicate the      	 Playstation 2 console to enable you to play PS2 games on your PC.
 
-grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slots
+grade: stable # must be 'stable' to release into candidate/stable channels
+confinement: strict # use 'strict' once you have the right plugs and slots
 
 apps:
   pcsx2-tabetai: 
     command: desktop-launch $SNAP/bin/PCSX2
+    plugs: [network, network-bind, x11, opengl, home, alsa, pulseaudio, bluez, joystick, raw-usb, removable-media, wayland, unity7]
     desktop: usr/share/applications/PCSX2.desktop
 
 
