@@ -65,4 +65,4 @@ parts:
       - libwxgtk3.0-0v5
       - libx11-6
       - zlib1g 
-    after: [desktop-gtk2]
+   after: [desktop-gtk2]
