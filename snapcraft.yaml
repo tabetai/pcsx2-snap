@@ -16,6 +16,7 @@ apps:
 
 parts:
   pcsx2-tabetai:
+    source: https://github.com/PCSX2/pcsx2.git
     plugin: cmake
     configflags:
           - -DCMAKE_BUILD_TYPE=Release
@@ -24,8 +25,6 @@ parts:
           - -DDISABLE_ADVANCE_SIMD=TRUE
           - -DPACKAGE_MODE=TRUE
           - -DGSDX_LEGACY=TRUE
-    source-type: git
-    source: https://github.com/PCSX2/pcsx2.git
     build-packages:
       - libaio-dev
       - libasound2-dev
