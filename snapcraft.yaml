@@ -6,7 +6,7 @@ description: |
 
 grade: stable # must be 'stable' to release into candidate/stable channels
 confinement: strict # use 'strict' once you have the right plugs and slots
-
+architectures: [amd64, i386]
 apps:
   pcsx2-tabetai: 
     command: desktop-launch $SNAP/bin/PCSX2
@@ -15,11 +15,6 @@ apps:
 
 
 parts:
-  enable-i386:
-  plugin: nil
-    prepare: |
-      dpkg --add-architecture i386
-      apt-get update
   pcsx2-tabetai:
     source: https://github.com/PCSX2/pcsx2.git
     plugin: cmake
@@ -73,4 +68,3 @@ parts:
            - libx11-6:i386
            - zlib1g:i386 
     after: [desktop-gtk2]
-    after: [enable-i386]
