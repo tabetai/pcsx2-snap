@@ -16,7 +16,7 @@ apps:
 
 parts:
   enable-i386:
-    plugin: nil
+  plugin: nil
     prepare: |
       dpkg --add-architecture i386
       apt-get update
