@@ -73,3 +73,4 @@ parts:
            - libx11-6:i386
            - zlib1g:i386 
     after: [desktop-gtk2]
+    after: [enable-i386]
